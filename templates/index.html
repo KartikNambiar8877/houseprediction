@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+</head>
+<body>
+    <style>
+        body {background-color: red;}
+        h1   {color: blue;}
+    </style>
+    <div>
+     <form action="{{url_for('predict')}}" method="post"> 
+        <input type="text" name="area" placeholder="Enter Area"> 
+        <br><br> 
+        <label for="bedroom">Bedroom:</label>
+        <select id="bedroom" name="bedroom">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+         </select> 
+         <br><br> 
+        <label for="bathroom">Bathroom:</label>
+        <select id="bathroom" name="bathroom">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+         </select> 
+         <br><br> 
+        <label for="stories">Stories:</label>
+        <select id="stories" name="stories">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+         </select> 
+         <br><br> 
+        <label for="mainroad">Mainroad:</label>
+        <select id="mainroad" name="mainroad">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+         </select> 
+         <br><br> 
+        <label for="guestroom">Guestroom:</label>
+        <select id="guestroom" name="guestroom">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+         </select> 
+         <br><br> 
+        <label for="basement">Basement:</label>
+        <select id="basement" name="basement">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+         </select> 
+         <br><br> 
+        <label for="hotwatering">Hotwatering:</label>
+        <select id="hotwatering" name="hotwatering">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+         </select> 
+         <br><br> 
+        <label for="airconditioning">Airconditioning:</label>
+        <select id="airconditioning" name="airconditioning">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+         </select> 
+         <br><br> 
+        <label for="parking">Parking:</label>
+        <select id="parking" name="parking">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+         </select> 
+         <br><br> 
+        <label for="prefarea">Prefarea:</label>
+        <select id="prefarea" name="prefarea">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+         </select> 
+         <br><br> 
+        <label for="fs">Furnishing Status:</label>
+        <select id="fs" name="fs">
+            <option value="1">Furnished</option>
+            <option value="0.5">Semi-Furnished</option>
+            <option value="0">Unfurnished</option>
+            
+         </select> 
+         <br><br>
+         <button type="submit">Submit<button/>
+     </form>
+     
+     <b>{{prediction_text}}<b>
+     
+</body>
+</html>
